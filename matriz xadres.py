@@ -1,0 +1,25 @@
+
+def criar_matiz(linhas, colunas):
+    matriz = []
+    for i in range(linhas):
+        matriz.append([])
+        for j in range(colunas):
+            if i % 2 == 0:
+                if j % 2 == 0:
+                    matriz[i].append(0)
+                else:
+                    matriz[i].append(1)
+            else:
+                if j % 2 == 0:
+                    matriz[i].append(1)
+                else:
+                    matriz[i].append(0)
+
+    return matriz
+
+linha = 30
+coluna = 30
+
+matriz = criar_matiz(linha,coluna)
+for linha in matriz:
+    print(linha)
